@@ -1,24 +1,33 @@
-# Lost Hiker Simulation
-### Part of masters project
+# HALE - Heuristic Agent-based Lost-person Estimator
+### Part of my Masters project in Cybernetics and Autonimous Systems
 
-A Python project for simulating random walks, elevation-based movement, and visualizing results (e.g., heatmaps of endpoints).  
-Built with `numpy`, `matplotlib`, `rasterio`, `haversine`, and `pyproj`.
+HALE is a python code that uses thousands of simulated agents to generate a heatmap of estimated locations of the lost person.
 
----
+Running the Demo will result in this output:
 
-## Features
-- Random walk simulations
-- Elevation-aware movement (climbers/declimbers)
-- Coordinate transformations with `pyproj`
-- Raster data handling with `rasterio`
-- Heatmap plotting of hiker endpoints
+![Demo of HALE output heatmap](/output/Plot_2026-05-14_1702_Test_sims=10000_res=60_hours=3.pdf)
 
----
 
 ## Project Structure
-- main.py # Entry point for running simulations and visualizations
+- main.py # Initiate CFG instance(s), set plotting settings by selecting True/False on the variables.
 
-- utilities.py # Helper functions and classes (walkers, raster tools, etc.)
+- update_func.py # Handles the simulation runs.
+
+- config.py # Holds the initial CFG class definition with standard values.
+
+- sim_evaluation.py # Handles the evaluation of the simulation results from stored .CSV files.
+
+- movement_models.py # Holds functions to handle the different movement models for the agents
+
+- direction_modifiers.py, speed_modifiers.py # Hold individual functions to apply modifiers
+
+- blockers_and_policies.py # Holds individual functions that handle blockers and their corosponding policies
+
+- utilities.py # Holds different functions that are needed to function globaly
+
+- plotting.py # Handles the plotting of the simulation output
+
+- multi_plotting.py # Handles ploting of simulation runs from .CSV files.
 
 - requirements.txt # Dependencies
 
@@ -30,7 +39,7 @@ Built with `numpy`, `matplotlib`, `rasterio`, `haversine`, and `pyproj`.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/StiviRiggen/Master_Project_main.git
+   git clone https://github.com/StiviRiggen/HALE_Masters_Project.git
 
 2. (optional) Create virtuel environment
 
@@ -44,5 +53,7 @@ Built with `numpy`, `matplotlib`, `rasterio`, `haversine`, and `pyproj`.
    ```bash
    python main.py
 
-- Run differrent simulations by calling on the different functions found in `utilities.py` and change parameters by changing the input values for the function.
+## Configuration
+
+- Change parameters in the CFG instances, or in the main class in config.py
 
