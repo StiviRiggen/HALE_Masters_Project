@@ -6,7 +6,7 @@ HALLE is a Python-based simulation framework that uses thousands of simulated ag
 
 Running the demo produces an output heatmap similar to:
 
-![Demo of HALLE output heatmap](/output/Plot_2026-05-14_1702_Test_sims=10000_res=60_hours=3.pdf)
+![Demo of HALLE output heatmap](/output/Plot_2026-05-14_1702_Test_sims=10000_res=60_hours=3.png)
 
 ---
 
