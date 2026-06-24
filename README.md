@@ -1,4 +1,4 @@
-# HALE - Heuristic Agent-based Lost-person Estimator
+# HALLE - Heuristic Agent-based Lost-person Location Estimator
 ### Part of my Masters project in Cybernetics and Autonimous Systems at UiO
 
 HALE is a python code that uses thousands of simulated agents to generate a heatmap of estimated locations of the lost person.
