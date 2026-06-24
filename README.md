@@ -71,5 +71,4 @@ Running the demo produces an output heatmap similar to:
 
 ## Configuration
 
-- Change parameters in the CFG instances in the main.py file, or in the configuration class in the config.py file
-
+- Change parameters in the CFG instances in the main.py file, or in the CFG class in the config.py file.
