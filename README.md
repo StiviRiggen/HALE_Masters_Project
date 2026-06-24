@@ -1,37 +1,52 @@
-# HALLE - Heuristic Agent-based Lost-person Location Estimator
-### Part of my Masters project in Cybernetics and Autonimous Systems at UiO
+## HALLE – Heuristic Agent-based Lost-person Location Estimator
 
-HALE is a python code that uses thousands of simulated agents to generate a heatmap of estimated locations of the lost person.
+Part of my Master's project in Cybernetics and Autonomous Systems at the University of Oslo (UiO).
 
-Running the Demo will result in this output:
+HALLE is a Python-based simulation framework that uses thousands of simulated agents to generate a heatmap of the estimated locations of a lost person.
 
-![Demo of HALE output heatmap](/output/Plot_2026-05-14_1702_Test_sims=10000_res=60_hours=3.pdf)
+Running the demo produces an output heatmap similar to:
 
+![Demo of HALLE output heatmap](/output/Plot_2026-05-14_1702_Test_sims=10000_res=60_hours=3.pdf)
+
+---
 
 ## Project Structure
-- main.py # Initiate CFG instance(s), set plotting settings by selecting True/False on the variables.
 
-- update_func.py # Handles the simulation runs.
+- `main.py`  
+  Entry point. Initializes `CFG` instance(s) and sets plotting options via boolean variables.
 
-- config.py # Holds the initial CFG class definition with standard values.
+- `update_func.py`  
+  Core simulation loop and update functions.
 
-- sim_evaluation.py # Handles the evaluation of the simulation results from stored .CSV files.
+- `config.py`  
+  Contains the `CFG` class definition with default configuration values.
 
-- movement_models.py # Holds functions to handle the different movement models for the agents
+- `sim_evaluation.py`  
+  Tools for evaluating simulation results stored in `.csv` files.
 
-- direction_modifiers.py, speed_modifiers.py # Hold individual functions to apply modifiers
+- `movement_models.py`  
+  Functions implementing different agent movement models.
 
-- blockers_and_policies.py # Holds individual functions that handle blockers and their corosponding policies
+- `direction_modifiers.py`, `speed_modifiers.py`  
+  Functions that apply direction and speed modifiers to agents.
 
-- utilities.py # Holds different functions that are needed to function globaly
+- `blockers_and_policies.py`  
+  Functions that model blockers (e.g., obstacles, constraints) and their corresponding policies.
 
-- plotting.py # Handles the plotting of the simulation output
+- `utilities.py`  
+  General utility functions used throughout the project.
 
-- multi_plotting.py # Handles ploting of simulation runs from .CSV files.
+- `plotting.py`  
+  Functions for plotting simulation outputs.
 
-- requirements.txt # Dependencies
+- `multi_plotting.py`  
+  Functions for plotting and comparing multiple simulation runs from `.csv` files.
 
-- README.md # Project documentation
+- `requirements.txt`  
+  Python dependencies.
+
+- `README.md`  
+  Project documentation (this file).
 
 ---
 
@@ -40,10 +55,11 @@ Running the Demo will result in this output:
 1. Clone the repository:
    ```bash
    git clone https://github.com/StiviRiggen/HALE_Masters_Project.git
+   cd HALE_Masters_Project
 
 2. (optional) Create virtuel environment
 
-3. Install dependancies
+4. Install dependancies
    ```bash
    pip install -r requirements.txt
 
@@ -55,5 +71,5 @@ Running the Demo will result in this output:
 
 ## Configuration
 
-- Change parameters in the CFG instances, or in the main class in config.py
+- Change parameters in the CFG instances in the main.py file, or in the configuration class in the config.py file
 
